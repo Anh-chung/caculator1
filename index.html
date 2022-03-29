@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Caculator</title>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=bFnIkAMktD019NwtXdHEIs5hXXdebP402ApwBuWoB2nZdHidmF8XmTp5vis6XOLmMKV14-MZnZO1uBseITrObRvBz9jaZMqIzkdXaQMSKShYhbyTEykHo15kvDDbMe60rsghud3nhsOTPlqEcU9rc3DOMzMIaqpmoHPGtl4Ym5KeWK1SvzXApg8dHAYfO6kG1orQJ78mT1gryj4uGpjC1PEZT3C_x_KTnd4DZfkVlgCZ8XIUldSaDTMDy1aRMU1QgDLvkw_D9If5ea1XX5pyMN8dINYJj7AS8mnBhzfUHut99RxLdgjcGcKgizw_J4iENby1MD73aDfYquzf-cB1JeLb6HBCUZ0GP3fnUbXYhj4" charset="UTF-8"></script></head>
+<body>
+    <div class="container">
+        <div class="caculator">
+            <input type="text" placeholder="0" id="output-screen">
+            <button onclick="dispaly('/')">/</button>
+            <button onclick="dispaly('7')">7</button>
+            <button onclick="dispaly('8')">8</button>
+            <button onclick="dispaly('9')">9</button>
+            <button onclick="dispaly('*')">*</button>
+            <button onclick="dispaly('4')">4</button>
+            <button onclick="dispaly('5')">5</button>
+            <button onclick="dispaly('6')">6</button>
+            <button onclick="dispaly('-')">-</button>
+            <button onclick="dispaly('1')">1</button>
+            <button onclick="dispaly('2')">2</button>
+            <button onclick="dispaly('3')">3</button>
+            <button onclick="dispaly('+')">+</button>
+            <button onclick="dispaly('.')">.</button>
+            <button onclick="dispaly('0')">0</button>
+            <button onclick="calculate('=')"class="equal">=</button>
+
+        </div>
+
+    </div>
+    <script>
+        let outputScreen = document.getElementById("output-screen");
+        function dispaly(num){
+            outputScreen.value += num;
+        }
+        function calculate(){
+            try {
+                outputScreen.value = eval(outputScreen.value)
+            }
+            catch(err){
+                alert("nhap sai")
+               
+            }
+        }
+    </script>
+</body>
+</html>
